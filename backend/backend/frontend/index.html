@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Projeto Teste</title>
+</head>
+<body>
+  <h1>Resposta da API:</h1>
+  <p id="resposta">Carregando...</p>
+
+  <script>
+    fetch('/hello')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('resposta').innerText = data;
+      });
+  </script>
+</body>
+</html>
